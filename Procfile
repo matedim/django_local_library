@@ -1,1 +1,1 @@
-web: gunicorn gettingstarted.wsgi
+web: python django_local_library/manage.py run_gunicorn -b 0.0.0.0:$PORT -w 3
