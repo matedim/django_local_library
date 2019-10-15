@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'i@nsn*oz9pz84he(b@@5n2mah_wey!
 DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 
 # ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['lit-garden-88956.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['djangostatus.herokuapp.com', '127.0.0.1']
 # For example:
 # ALLOWED_HOSTS = ['fathomless-scrubland-30645.herokuapp.com','127.0.0.1']
 SITE_ID = 1
