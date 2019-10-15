@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'i@nsn*oz9pz84he(b@@5n2mah_wey!
 DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 
 # ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['djangostatus.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 # For example:
 # ALLOWED_HOSTS = ['fathomless-scrubland-30645.herokuapp.com','127.0.0.1']
 SITE_ID = 1
@@ -128,6 +128,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 EMAIL_HOST = 'smtp.gmail.com'
@@ -138,7 +139,7 @@ EMAIL_USE_TLS = True
 
 # Heroku: Update database configuration from $DATABASE_URL.
 import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age=500)
+db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
 
 # Static files (CSS, JavaScript, Images)

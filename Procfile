@@ -1,1 +1,1 @@
-web: python django_local_library/manage.py run_gunicorn -b 0.0.0.0:$PORT -w 3
+web: gunicorn django_local_library.wsgi --log-file-
