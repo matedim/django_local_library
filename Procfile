@@ -1,1 +1,1 @@
-web: gunicorn hello:app --preload
+web: gunicorn django_local_library.wsgi --log-file -
