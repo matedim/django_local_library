@@ -21,13 +21,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = 'i@nsn*oz9pz84he(b@@5n2mah_wey!ukyussrxu-it3lvd9w-j'
-import os
+
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'i@nsn*oz9pz84he(b@@5n2mah_wey!ukyussrxu-it3lvd9w-j')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
-
+import django_heroku
+django_heroku.settings(locals())
 # ALLOWED_HOSTS = []
 ALLOWED_HOSTS = ['*']
 # For example:
