@@ -27,8 +27,6 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'i@nsn*oz9pz84he(b@@5n2mah_wey!
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
-import django_heroku
-django_heroku.settings(locals())
 # ALLOWED_HOSTS = []
 ALLOWED_HOSTS = ['*']
 # For example:
